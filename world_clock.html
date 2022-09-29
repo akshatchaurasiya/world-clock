@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>time</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body {
+            background-image: url('/var/www/html/akshat/logo/world.jpeg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .heading{
+            color: white;
+            background-color: black;
+        }
+        .div{
+            margin: 15.3% 15% 10% 15%;
+            padding: 2.4% 2% 2.4% 2%;
+            border: black solid 1px;
+            border-radius: 2%;
+            text-align: center;
+            background: rgba(155, 235, 253, 0.9);
+        }
+        #mySelect{
+            color: black;
+            font-size: 120%;
+            width: 50%;
+        }
+        #input{
+            color: black;
+            font-size: 120%;
+            width: 50%;
+        }
+        .fields{
+            font-size: 150%;
+            color: red;
+            font-weight: bold;
+        }
+        .footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-bottom: 0%;
+            padding: 0%;
+            position: relative;
+        }
+        .fnote{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+        <div class="div">
+            <h1 class="heading">World Clock</h1>
+            <label for="mySelect" class="fields">Select Country : </label>
+            <select id="mySelect" onchange="myFunction()" class="select">
+                <option value="0">Server timezone (local)</option>
+                <option value="1">Afghanistan, Kabul</option>
+                <option value="2">Australia, Australian Capital Territory, Canberra</option>
+                <option value="3">Bangladesh, Dhaka</option>
+                <option value="4">Belgium, Brussels, Brussels *</option>
+                <option value="5">Brazil, Distrito Federal, Brasilia</option>
+                <option value="6">British Virgin Islands, Tortola, Road Town</option>
+                <option value="7">Cameroon, Yaoundé</option>
+                <option value="8">Canada, Ontario, Ottawa *</option>
+                <option value="9">China, Beijing Municipality</option>
+                <option value="10">Colombia, Bogota</option>
+                <option value="11">Cuba, Havana *</option>
+                <option value="12">Denmark, Copenhagen *</option>
+                <option value="13">Finland, Helsinki *</option>
+                <option value="14">France, Paris *</option>
+                <option value="15">Germany, Berlin*</option>
+                <option value="16">Greece, Athens *</option>
+                <option value="17">Greenland, Nuuk *</option>
+                <option value="18">Iceland, Reykjavik</option>
+                <option value="19">India, Delhi, New Delhi</option>
+                <option value="20">Indonesia, Jakarta</option>
+                <option value="21">Iran, Tehran</option>
+                <option value="22">Iraq, Baghdad</option>
+                <option value="23">Israel, Jerusalem *</option>
+                <option value="24">Italy, Rome *</option>
+                <option value="25">Japan, Tokyo</option>
+                <option value="26">Kazakhstan, Astana</option>
+                <option value="27">Kenya, Nairobi</option>
+                <option value="28">Kuwait, Kuwait City</option>
+                <option value="29">Madagascar, Antananarivo</option>
+                <option value="30">Malaysia, Kuala Lumpur</option>
+                <option value="31">Maldives, Male</option>
+                <option value="32">Mexico, Ciudad de México, Mexico City *</option>
+                <option value="33">Morocco, Rabat *</option>
+                <option value="34">Mozambique, Maputo</option>
+                <option value="35">Myanmar, Naypyidaw</option>
+                <option value="36">Nepal, Kathmandu</option>
+                <option value="37">Netherlands, Amsterdam *</option>
+                <option value="38">New Zealand, Wellington *</option>
+                <option value="39">Nigeria, Federal Capital Territory, Abuja</option>
+                <option value="40">North Korea, Pyongyang</option>
+                <option value="41">Oman, Muscat</option>
+                <option value="42">Pakistan, Islamabad</option>
+                <option value="43">Peru, Lima, Lima</option>
+                <option value="44">Philippines, Manila</option>
+                <option value="45">Poland, Warsaw *</option>
+                <option value="46">Portugal, Lisbon *</option>
+                <option value="47">Qatar, Doha</option>
+                <option value="48">Romania, Bucharest *</option>
+                <option value="49">Russia, Moscow</option>
+                <option value="50">Rwanda, Kigali</option>
+                <option value="51">Sierra Leone, Freetown</option>
+                <option value="52">Singapore, Singapore</option>
+                <option value="53">Somalia, Mogadishu</option>
+                <option value="54">South Africa, Pretoria</option>
+                <option value="55">South Korea, Seoul</option>
+                <option value="56">Spain, Madrid *</option>
+                <option value="57">Sri Lanka,Sri Jayawa rdenepura Kotte</option>
+                <option value="58">Sudan, Khartoum</option>
+                <option value="59">Sweden, Stockholm *</option>
+                <option value="60">Switzerland, Bern, Bern *</option>
+                <option value="61">Taiwan, Taipei</option>
+                <option value="62">Tajikistan, Dushanbe</option>
+                <option value="63">Tanzania, Dodoma</option>
+                <option value="64">Thailand, Bangkok</option>
+                <option value="65">Turkey, Ankara</option>
+                <option value="66">United Arab Emirates, Abu Dhabi</option>
+                <option value="67">United Kingdom, England, London *</option>
+                <option value="68">USA, District of Columbia, Washington DC *</option>
+                <option value="69">Uzbekistan, Tashkent</option>
+                <option value="70">Vatican City State, Vatican City *</option>
+                <option value="71">Venezuela, Caracas</option>
+                <option value="72">Vietnam, Hanoi</option>
+                <option value="73">Zimbabwe, Harare</option>
+            </select><br><br><br>
+            <label for="input" class="fields">Current Time : </label>
+            <input type="text" id="input" disabled /><br><br>
+        </div>
+        <div class="footer">
+            <h1>@chaurasiyacomputers</h1>
+            <p>Copyright &copy; 2020 -
+                <script>
+                    document.write(new Date().getFullYear().toString().substr(-2));
+                </script>
+                Akshat Chaurasiya All Rights Reserved
+            </p>
+            <p class="fnote">
+                Created & Designed by: <br> 
+                Amandeep Maurya
+            </p>
+            
+        </div>
+    <script>
+        setInterval(myFunction, 1000);
+        function myFunction() {
+            const dt = new Date();
+            zone = document.getElementById("mySelect").value;
+
+            switch (zone) {
+                case '0' :
+                    document.getElementById("input").value = dt;
+                    break;
+                case '1':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Kabul' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '2':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '3':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Dhaka' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '4':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '5':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '6':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '7':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '8':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '9':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '10':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '11':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '12':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'America/Danmarkshavn' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '13':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '14':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Europe/Paris' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '15':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Europe/Berlin' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '16':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '17':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '18':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '19':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '20':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '21':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '22':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Baghdad' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '23':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '24':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Europe/Rome' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '25':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Tokyo' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '26':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '27':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Africa/Nairobi' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '28':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Kuwait' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '29':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '30':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '31':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '32':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'America/Mexico_City' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '33':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '34':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '35':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '36':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Kathmandu' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '37':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '38':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '39':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '40':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '41':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Muscat' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '42':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '43':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '44':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '45':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '46':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Europe/Lisbon' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '47':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Qatar' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '48':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Europe/Moscow' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '49':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '50':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '51':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '52':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Singapore' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '53':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '54':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '55':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '56':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '57':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '58':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '59':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '60':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '61':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '62':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '63':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '64':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Asia/Bangkok' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '65':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '66':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '67':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Europe/London' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '68':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '69':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '70':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '71':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '72':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: '' });
+                    document.getElementById("input").value = ptime;
+                    break;
+                case '73':
+                    var ptime = dt.toLocaleString('en-IN', { timeZone: 'Africa/Harare' });
+                    document.getElementById("input").value = ptime;
+                    break;    
+
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
